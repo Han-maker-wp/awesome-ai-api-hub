@@ -4,7 +4,7 @@
 
 **一个 Key，打通全世界的大模型。**
 
-精选 **99** 个站点，分两大类别：**AI 相关**（中转站 / 聚合网关 / 官方直连 / 比价导航 / 自建方案）与 **AI 无关 · 通用基础设施**（网络代理 / 机场评测 / 网络工具 / 账号接码）
+精选 **102** 个站点，分两大类别：**AI 相关**（中转站 / 聚合网关 / 官方直连 / 比价导航 / 自建方案）与 **AI 无关 · 通用基础设施**（网络代理 / 机场评测 / 网络工具 / 账号接码）
 
 不用外币卡、不用折腾网络，支付宝/微信充值即可调用 GPT、Claude、Gemini、DeepSeek 与全部国产大模型
 
@@ -50,13 +50,13 @@
 
 | 分类 | 内容 | 适合谁 |
 | :--- | :--- | :--- |
-| [🔌 中转站 / 聚合平台](#-ai-api-中转站--聚合平台) | 16 个，国内可直连，支付宝充值 | 个人开发者、小团队、快速验证 |
+| [🔌 中转站 / 聚合平台](#-ai-api-中转站--聚合平台) | 17 个，国内可直连，支付宝充值 | 个人开发者、小团队、快速验证 |
 | [🏢 官方直连 · 国内厂商](#-官方直连--国内大模型厂商) | 14 个，官方控制台，注册送额度 | 要合规、要发票、要稳定性 |
 | [🌍 官方直连 · 国际平台](#-官方直连--国际平台) | 12 个，模型最新最全 | 有海外网络与外币卡的用户 |
 | [🔬 检测 · 验真](#-ai-api-检测--验真) | 7 个，实测模型真伪与掺水率 | **花钱之前先验货** |
-| [🧭 AI 导航 · 比价 · 评测](#-ai-导航--比价--评测) | 9 个，实时报价与在线率 | 选型前做功课，避坑 |
+| [🧭 AI 导航 · 比价 · 评测](#-ai-导航--比价--评测) | 10 个，实时报价与在线率 | 选型前做功课，避坑 |
 | [🛒 AI 账号 · 订阅服务](#-ai-账号--订阅服务) | 3 个，AI 会员账号自助购买 | 需要成品账号的场景 |
-| [🛠️ 自建网关](#️-自建网关--开源自部署) | 6 个，开源自部署 | 不想把 Key 交给别人 |
+| [🛠️ 自建网关](#️-自建网关--开源自部署) | 7 个，开源自部署 | 不想把 Key 交给别人 |
 
 ### 🌐 二、AI 无关 · 通用基础设施
 
@@ -98,12 +98,16 @@ print(resp.choices[0].message.content)
 
 > OpenAI 兼容协议，一个 Key 打通多家模型，支持支付宝 / 微信支付，国内网络可直连。
 > ⭐ 为个人使用体验较好、社区口碑较稳的站点。
+>
+> 💡 **整理者自用推荐**：日常主力是 [**NikoAPI**](https://us2.nikoapi.xyz/wallet) 和 [**WawAPI**](https://wawapi.xyz/model-square) —— 这两家延迟与稳定性综合表现最好，都是小额起充、支持签到白嫖。**但请先按[防坑指南](#️-防坑指南)验一遍再充值。**
 
 | 名称 | 说明 | 标签 |
 | :--- | :--- | :--- |
 | [**302.AI**](https://302.ai/) ⭐ | 按量付费，10 大类 API（LLM/图像/视频/音频/RAG）+ 开箱即用的在线 App | `聚合` |
 | [**AiHubMix**](https://aihubmix.com/) ⭐ | 720+ 模型，官方云路由 + 自动故障转移，多 SDK 即插即用 | `聚合` |
 | [**V-API (gpt.ge)**](https://gpt.ge/) ⭐ | 650+ 模型，原生兼容 Chat / Responses / Claude / Gemini 四种协议，运营 3 年+ | `聚合` |
+| [**基元律动 TokenRhythm**](https://tokenrhythm.ai/) ⭐ | 对标 OpenRouter 的国产聚合平台，一个 Key 调全量模型，主打 Agent 原生智能路由 | `聚合` |
+| [**数眼智能 DataEyesAI**](https://www.shuyanai.com/) ⭐ | 企业级模型云服务，新用户赠 5M Token，支持微信 / 支付宝，带多团队密钥管理 | `聚合` |
 | [**Faro API**](https://faroapi.com/pricing) ⭐ | 支持每日签到，可以白嫖试用额度 | `中转` |
 | [**Pixel API**](https://ai-pixel.online/dashboard) ⭐ | 稳定性口碑不错，新手友好 | `中转` |
 | [**NikoAPI**](https://us2.nikoapi.xyz/wallet) ⭐ | 美区节点，延迟表现好 | `中转` |
@@ -111,7 +115,6 @@ print(resp.choices[0].message.content)
 | [梦幻API](https://mhapi.cn/available-channels) | 渠道状态页实时可查，模型覆盖面广 ⚠️ 2026-10 核实疑似失效，可能已换域名 | `中转` |
 | [Camel API](https://luotuokj.top/dashboard) | 骆驼科技，控制台清爽，适合轻量调用 | `中转` |
 | [AIAPIBANK](https://aiapibank.com/) | 模型广场式浏览，按模型挑渠道 | `中转` |
-| [Lucis API](https://www.lucisapi.ai/keys) | 独立 Key 管理，便于多项目隔离 ⚠️ 2026-10 核实疑似失效，可能已换域名 | `中转` |
 | [元衡 API](https://cn.meta-api.vip/pricing) | 国内节点，价格表公开透明 | `中转` |
 | [EMOAI](https://api.emooo.cc/dashboard) | 主打国产大模型，价格低 | `国产模型` |
 | [OhMyGPT](https://www.ohmygpt.com/) | 240+ 模型，2023 年运营至今，支持对公发票 | `聚合` |
@@ -185,6 +188,7 @@ print(resp.choices[0].message.content)
 | [**OpenPrice**](https://www.openprice.cc/card-products) ⭐ | 聚合 280+ 渠道商报价，含最低价与在售数 | `比价` |
 | [**Aibijia**](https://aibijia.org/) ⭐ | AI 订阅一键比价，帮你找便宜 Token | `比价` |
 | [**卡网大全**](https://cardnav.xyz/) ⭐ | 一站式大模型账号购买导航 | `导航` |
+| [AI Coding 福利站导航](https://github.com/panxunying/ai-coding-welfare) | 白嫖 Claude Code / Codex 的公益站合集，额度与价格每 6 小时自动更新，附一键配置脚本 ⚠️ 站内含邀请链接，自行甄别 | `福利导航` |
 | [AI 订阅与资源聚合导航](https://cheap-ai.uk/) | GPT / Claude / Gemini / Grok 一站发现 | `导航` |
 | [AI 工具集](https://ai-bot.cn/) | 国内收录最全的 AI 工具导航 | `导航` |
 | [AIGC 工具导航](https://www.aigc.cn/) | 生成式 AI 工具分类检索 | `导航` |
@@ -210,6 +214,7 @@ print(resp.choices[0].message.content)
 | :--- | :--- | :--- |
 | [**one-api**](https://github.com/songquanpeng/one-api) ⭐ | 经典 OpenAI 接口聚合管理系统，支持 30+ 上游，单文件 Docker 一键部署 | `Go · 37k★` |
 | [**new-api**](https://github.com/QuantumNous/new-api) ⭐ | one-api 增强分支，UI 更现代，支持 OpenAI / Claude / Gemini 三种协议互转 | `Go · 50k★` |
+| [**sub2api**](https://github.com/Wei-Shaw/sub2api) ⭐ | **订阅转 API** 网关：把 Claude / OpenAI / Gemini / Grok 的**订阅账号**统一接入成 API，支持拼车共享、Token 级计费与自助充值 ⚠️ 可能违反上游订阅条款 | `Go · 44k★` |
 | [**LiteLLM**](https://github.com/BerriAI/litellm) ⭐ | 100+ LLM 统一调用 + 代理网关，带成本追踪与负载均衡 | `Python · 61k★` |
 | [uni-api](https://github.com/yym68686/uni-api) | YAML 配置多后端，轻量好部署 | `Python` |
 | [gpt-load](https://github.com/tbphp/gpt-load) | 多 Key / 多凭据轮询，含调度容错与用量统计 | `Go · 7k★` |
@@ -240,6 +245,28 @@ print(resp.choices[0].message.content)
 | [极连云](https://bhjsehj3u.jilianat.homes/) | 原生 IP，年付约 96 元（入口为随机子域名） | `机场` |
 | [TAG](https://honven.l49.net/) | 含家宽节点，年付约 162 元 | `机场` |
 | [筋斗云](https://yongjichang.com/) | 约 17 元/月，有第三方评测页可参考 | `机场` |
+
+## 📊 机场评测 · 跑路预警 · 博客
+
+> 机场这行**信息不对称极其严重**：宣传页人人写「IPLC 专线、原生 IP、不限速」，实际体验天差地别，跑路更是家常便饭。
+> 下单之前，先去独立博客看实测数据、去跑路清单里搜一下名字 —— 这比省那几块钱重要得多。
+>
+> ⚠️ 这类站点大多靠**推广返利**维持运营，推荐列表本身带商业倾向。当**信息源**看，别当**排行榜**看。
+
+| 名称 | 说明 | 标签 |
+| :--- | :--- | :--- |
+| [**毒奶博客 Limbopro**](https://limbopro.com/) ⭐ | 机场实测 + 跑路预警，圈内口碑最硬的老牌博客 | `评测` |
+| [**跑路机场清单**](https://github.com/limbopro/Paolujichang) ⭐ | GitHub 开源清单，记录已跑路 / 高危机场 | `跑路清单` |
+| [**二毛**](https://ermao.net/) ⭐ | 机场评测 + 自建教程，更新稳定 | `评测` |
+| [**茶波博客**](https://clashx.pro/) ⭐ | 机场测评与客户端教程，偏实用向 | `评测` |
+| [**爱机场**](https://aijichang.com/) ⭐ | 机场推荐 + 跑路预警 + 资讯，更新活跃 | `评测` |
+| [火箭旺](https://shadowrocket.one/) | 逐家机场实测（WgetCloud / 花云 / 极连云等），更新到 2026 | `评测` |
+| [翻墙岛](https://fanqiangdao.com/) | 机场推荐与网络知识科普 | `评测` |
+| [机场推荐](https://jichangcnweb.com/) | 机场横向推荐汇总 | `推荐` |
+| [机场推荐 Pro](https://jichangtuijianpro.com/) | 分类推荐 + 优惠信息 | `推荐` |
+| [润兔分享](https://runtushare.net/) | 机场测评与优惠分享 | `评测` |
+| [毒药SS DuyaoSS](https://duyaoss.com/) | 经典机场测评站，⚠️ 2024-04 后基本停更，仅作历史参考 | `评测` |
+| [Telegram 翻墙频道](https://t.me/ffqchannel) | 实时跑路爆料与节点分享 | `频道` |
 | [机场导航站](https://vpsknow.com/airport-recommendations) | 机场横向评测与推荐汇总 | `导航` |
 
 ## 🔧 网络工具 · IP 检测 · Cloudflare
@@ -318,6 +345,8 @@ python tools/gen_site.py
 
 | 日期 | 内容 |
 | :--- | :--- |
+| 2026-10-16 | 新增 **基元律动 TokenRhythm**、**数眼智能 DataEyesAI** 两个聚合平台；自建网关新增 **sub2api**（订阅转 API）；导航新增 **AI Coding 福利站导航**；移除失效的 Lucis API；补充中转站自用推荐（Niko / WaW）。站点总数 **102** 个 |
+| 2026-10-16 | 新增 **📊 机场评测 · 跑路预警 · 博客** 子分类（13 个评测站 / 跑路清单 / 频道）；站点总数 **99** 个 / 11 个子分类 |
 | 2026-10-16 | 新增 **🔬 AI API 检测 · 验真** 子分类（7 个检测站），专治「掉包降智」；站点总数 **87** 个 / 10 个子分类 |
 | 2026-10-16 | 经真实代理复核全部 **81 条**链接：**75 条可达**。标注 3 条疑似失效（梦幻API / Lucis API / FlyBit），修正极连云入口域名 |
 | 2026-10-16 | **重构为两大类**：🤖 AI 相关（61 个）+ 🌐 AI 无关 · 通用基础设施（20 个），共 81 个站点 / 9 个子分类；新增网络代理、网络工具、通用账号三节 |

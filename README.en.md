@@ -4,7 +4,7 @@
 
 **One key. Every model.**
 
-**99** curated entries in two top-level groups: **AI-related** (relay stations / aggregators / official endpoints / comparison directories / self-hosted gateways) and **Non-AI · General Infrastructure** (network proxies / airport reviews / network tools / accounts & SMS)
+**102** curated entries in two top-level groups: **AI-related** (relay stations / aggregators / official endpoints / comparison directories / self-hosted gateways) and **Non-AI · General Infrastructure** (network proxies / airport reviews / network tools / accounts & SMS)
 
 Pay with Alipay/WeChat, no foreign card, no network gymnastics — call GPT, Claude, Gemini, DeepSeek and every major Chinese LLM from one endpoint
 
@@ -50,13 +50,13 @@ This repo organizes those entry points **into two top-level groups**, and marks 
 
 | Category | What's inside | Who it's for |
 | :--- | :--- | :--- |
-| [🔌 Relay Stations / Aggregators](#-relay-stations--aggregators) | 16, reachable from China, Alipay-friendly | Solo devs, small teams |
+| [🔌 Relay Stations / Aggregators](#-relay-stations--aggregators) | 17, reachable from China, Alipay-friendly | Solo devs, small teams |
 | [🏢 Official · Chinese Vendors](#-official--chinese-vendors) | 14 official consoles, free credits | Compliance, invoicing, stability |
 | [🌍 Official · Global Platforms](#-official--global-platforms) | 12, newest model coverage | Overseas network + foreign card |
 | [🔬 Detection · Verification](#-ai-api-detection--verification) | 7, test real model identity and dilution | **Verify before you pay** |
-| [🧭 AI Directories · Comparison](#-ai-directories--comparison) | 9, live pricing and uptime | Do your homework before picking |
+| [🧭 AI Directories · Comparison](#-ai-directories--comparison) | 10, live pricing and uptime | Do your homework before picking |
 | [🛒 AI Accounts · Subscriptions](#-ai-accounts--subscriptions) | 3, buy AI memberships | When you need a ready account |
-| [🛠️ Self-Hosted Gateways](#️-self-hosted-gateways) | 6 open-source, deploy yourself | When you don't want to hand over keys |
+| [🛠️ Self-Hosted Gateways](#️-self-hosted-gateways) | 7 open-source, deploy yourself | When you don't want to hand over keys |
 
 ### 🌐 II. Non-AI · General Infrastructure
 
@@ -98,12 +98,16 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 
 > OpenAI-compatible, one key for many models, Alipay/WeChat supported, reachable from mainland China.
 > ⭐ marks stations the curator personally found solid — **not an endorsement.**
+>
+> 💡 **Curator's daily drivers**: [**NikoAPI**](https://us2.nikoapi.xyz/wallet) and [**WawAPI**](https://wawapi.xyz/model-square) — best latency-to-stability ratio in practice, both allow small top-ups and daily check-in credit. **Still run the [checklist](#️-how-to-avoid-getting-burned) before you top up.**
 
 | Name | Notes | Tag |
 | :--- | :--- | :--- |
 | [**302.AI**](https://302.ai/) ⭐ | Pay-as-you-go, 10 API families plus ready-made online apps | `Aggregator` |
 | [**AiHubMix**](https://aihubmix.com/) ⭐ | 720+ models, official cloud routes, auto-failover | `Aggregator` |
 | [**V-API (gpt.ge)**](https://gpt.ge/) ⭐ | 650+ models, natively speaks Chat / Responses / Claude / Gemini | `Aggregator` |
+| [**基元律动 TokenRhythm**](https://tokenrhythm.ai/) ⭐ | China's answer to OpenRouter — one key for the full model catalog, agent-native smart routing | `Aggregator` |
+| [**数眼智能 DataEyesAI**](https://www.shuyanai.com/) ⭐ | Enterprise model cloud, 5M free tokens for new users, WeChat/Alipay top-up, multi-team key management | `Aggregator` |
 | [**Faro API**](https://faroapi.com/pricing) ⭐ | Daily check-in gives free trial credit | `Relay` |
 | [**Pixel API**](https://ai-pixel.online/dashboard) ⭐ | Solid stability reputation, beginner friendly | `Relay` |
 | [**NikoAPI**](https://us2.nikoapi.xyz/wallet) ⭐ | US nodes, good latency | `Relay` |
@@ -111,7 +115,6 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [梦幻API](https://mhapi.cn/available-channels) | Live channel-status page, broad model coverage ⚠️ Possibly dead as of 2026-10; domain may have changed | `Relay` |
 | [Camel API](https://luotuokj.top/dashboard) | Clean console, fine for light usage | `Relay` |
 | [AIAPIBANK](https://aiapibank.com/) | Browse by model, pick your channel | `Relay` |
-| [Lucis API](https://www.lucisapi.ai/keys) | Per-key management, good for project isolation ⚠️ Possibly dead as of 2026-10; domain may have changed | `Relay` |
 | [元衡 API](https://cn.meta-api.vip/pricing) | Domestic nodes, transparent pricing | `Relay` |
 | [EMOAI](https://api.emooo.cc/dashboard) | Focused on Chinese models, cheap | `CN models` |
 | [OhMyGPT](https://www.ohmygpt.com/) | 240+ models, running since 2023, corporate invoicing | `Aggregator` |
@@ -185,6 +188,7 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [**OpenPrice**](https://www.openprice.cc/card-products) ⭐ | Aggregates 280+ vendors, lowest price and stock counts | `Compare` |
 | [**Aibijia**](https://aibijia.org/) ⭐ | One-click subscription comparison | `Compare` |
 | [**CardNav**](https://cardnav.xyz/) ⭐ | Directory for buying LLM accounts | `Directory` |
+| [AI Coding Welfare Directory](https://github.com/panxunying/ai-coding-welfare) | Free-tier relay stations for Claude Code / Codex, quotas refreshed every 6 hours, ships a one-click setup script ⚠️ Contains referral links — judge for yourself | `Welfare` |
 | [AI Subscription Directory](https://cheap-ai.uk/) | Discover GPT / Claude / Gemini / Grok in one place | `Directory` |
 | [AI-Bot](https://ai-bot.cn/) | The most complete Chinese AI tool directory | `Directory` |
 | [AIGC Directory](https://www.aigc.cn/) | Categorized generative-AI tools | `Directory` |
@@ -210,6 +214,7 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | :--- | :--- | :--- |
 | [**one-api**](https://github.com/songquanpeng/one-api) ⭐ | The classic OpenAI-compatible aggregation system, 30+ upstreams, single-binary Docker deploy | `Go · 37k★` |
 | [**new-api**](https://github.com/QuantumNous/new-api) ⭐ | Enhanced fork, modern UI, cross-converts OpenAI / Claude / Gemini | `Go · 50k★` |
+| [**sub2api**](https://github.com/Wei-Shaw/sub2api) ⭐ | **Subscription-to-API** gateway: turn Claude / OpenAI / Gemini / Grok **subscription accounts** into API keys, with carpooling, token-level billing and self-service top-up ⚠️ May violate upstream subscription terms | `Go · 44k★` |
 | [**LiteLLM**](https://github.com/BerriAI/litellm) ⭐ | 100+ LLMs behind one call, plus a proxy gateway with cost tracking | `Python · 61k★` |
 | [uni-api](https://github.com/yym68686/uni-api) | YAML-configured multi-backend, lightweight | `Python` |
 | [gpt-load](https://github.com/tbphp/gpt-load) | Multi-key rotation with failover and usage stats | `Go · 7k★` |
@@ -337,6 +342,7 @@ python tools/gen_site.py      # regenerate the navigator page
 
 | Date | Change |
 | :--- | :--- |
+| 2026-10-16 | Added **基元律动 TokenRhythm** and **数眼智能 DataEyesAI** aggregators; **sub2api** (subscription-to-API gateway) under self-hosted; **AI Coding Welfare Directory** under directories; removed the dead Lucis API; added a curator's daily-driver note (Niko / WaW). **102** entries total |
 | 2026-10-16 | Added **📊 Airport Reviews · Exit-Scam Watch · Blogs** category (13 review sites / scam lists / channels); **99** entries / 11 categories total |
 | 2026-10-16 | Added **🔬 AI API Detection · Verification** category (7 checkers) to counter "swapping and dumbing down"; **87** entries / 10 categories total |
 | 2026-10-16 | Re-verified all **81 links** through a real proxy: **75 reachable**. Flagged 3 likely-dead entries (梦幻API / Lucis API / FlyBit), fixed the 极连云 entry domain |
