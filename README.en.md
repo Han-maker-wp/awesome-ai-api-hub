@@ -342,6 +342,7 @@ python tools/gen_site.py      # regenerate the navigator page
 
 | Date | Change |
 | :--- | :--- |
+| 2026-10-16 | Full re-check of all **102 links**: **98 reachable directly**; 2 (爱机场 / 火箭旺) block headless requests but were confirmed live in a browser; 2 confirmed dead (梦幻API / FlyBit) kept and flagged. `tools/check_links.py` upgraded: `--proxy` support, automatic retry, and an anti-bot allowlist to eliminate flaky false negatives |
 | 2026-10-16 | Added **基元律动 TokenRhythm** and **数眼智能 DataEyesAI** aggregators; **sub2api** (subscription-to-API gateway) under self-hosted; **AI Coding Welfare Directory** under directories; removed the dead Lucis API; added a curator's daily-driver note (Niko / WaW). **102** entries total |
 | 2026-10-16 | Added **📊 Airport Reviews · Exit-Scam Watch · Blogs** category (13 review sites / scam lists / channels); **99** entries / 11 categories total |
 | 2026-10-16 | Added **🔬 AI API Detection · Verification** category (7 checkers) to counter "swapping and dumbing down"; **87** entries / 10 categories total |
