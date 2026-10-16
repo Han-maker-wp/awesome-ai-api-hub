@@ -106,10 +106,10 @@ print(resp.choices[0].message.content)
 | [**Pixel API**](https://ai-pixel.online/dashboard) ⭐ | 稳定性口碑不错，新手友好 | `中转` |
 | [**NikoAPI**](https://us2.nikoapi.xyz/wallet) ⭐ | 美区节点，延迟表现好 | `中转` |
 | [**WawAPI**](https://wawapi.xyz/model-square) ⭐ | 模型广场 + 快速开通 | `中转` |
-| [梦幻API](https://mhapi.cn/available-channels) | 渠道状态页实时可查，模型覆盖面广 | `中转` |
+| [梦幻API](https://mhapi.cn/available-channels) | 渠道状态页实时可查，模型覆盖面广 ⚠️ 2026-10 核实疑似失效，可能已换域名 | `中转` |
 | [Camel API](https://luotuokj.top/dashboard) | 骆驼科技，控制台清爽，适合轻量调用 | `中转` |
 | [AIAPIBANK](https://aiapibank.com/) | 模型广场式浏览，按模型挑渠道 | `中转` |
-| [Lucis API](https://www.lucisapi.ai/keys) | 独立 Key 管理，便于多项目隔离 | `中转` |
+| [Lucis API](https://www.lucisapi.ai/keys) | 独立 Key 管理，便于多项目隔离 ⚠️ 2026-10 核实疑似失效，可能已换域名 | `中转` |
 | [元衡 API](https://cn.meta-api.vip/pricing) | 国内节点，价格表公开透明 | `中转` |
 | [EMOAI](https://api.emooo.cc/dashboard) | 主打国产大模型，价格低 | `国产模型` |
 | [OhMyGPT](https://www.ohmygpt.com/) | 240+ 模型，2023 年运营至今，支持对公发票 | `聚合` |
@@ -218,10 +218,10 @@ print(resp.choices[0].message.content)
 | [星辰VPN](https://xcvpn.us/) | 家宽节点，约 17 元/月 | `机场` |
 | [iKuuu VPN](https://ikuuu.win/) | 免费 / 低价路线，适合轻度使用 | `机场` |
 | [Mitce](https://mitce.io/) | 低价小流量套餐 | `机场` |
-| [FlyBit](https://fb.fastfastfast.buzz/) | 约 15 元/月，家宽节点 | `机场` |
+| [FlyBit](https://fb.fastfastfast.buzz/) | 约 15 元/月，家宽节点 ⚠️ 2026-10 核实疑似失效，可能已换域名 | `机场` |
 | [良心云](https://xn--9kqz23b19z.com/) | 价格亲民的机场 | `机场` |
 | [寰宇云](https://hyy.52kok.cn/) | 原生 IP，年付约 79 元 | `机场` |
-| [极连云](https://jilianat.homes/) | 原生 IP，年付约 96 元 | `机场` |
+| [极连云](https://bhjsehj3u.jilianat.homes/) | 原生 IP，年付约 96 元（入口为随机子域名） | `机场` |
 | [TAG](https://honven.l49.net/) | 含家宽节点，年付约 162 元 | `机场` |
 | [筋斗云](https://yongjichang.com/) | 约 17 元/月，有第三方评测页可参考 | `机场` |
 | [机场导航站](https://vpsknow.com/airport-recommendations) | 机场横向评测与推荐汇总 | `导航` |
@@ -301,6 +301,7 @@ python tools/gen_site.py
 
 | 日期 | 内容 |
 | :--- | :--- |
+| 2026-10-16 | 经真实代理复核全部 **81 条**链接：**75 条可达**。标注 3 条疑似失效（梦幻API / Lucis API / FlyBit），修正极连云入口域名 |
 | 2026-10-16 | **重构为两大类**：🤖 AI 相关（61 个）+ 🌐 AI 无关 · 通用基础设施（20 个），共 81 个站点 / 9 个子分类；新增网络代理、网络工具、通用账号三节 |
 | 2026-10-16 | 项目初始化，收录 64 个站点；修正 `new-api` 迁移至 `QuantumNous/new-api`、`V3 API` 迁移至 `gpt.ge` |
 

@@ -106,10 +106,10 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [**Pixel API**](https://ai-pixel.online/dashboard) ⭐ | Solid stability reputation, beginner friendly | `Relay` |
 | [**NikoAPI**](https://us2.nikoapi.xyz/wallet) ⭐ | US nodes, good latency | `Relay` |
 | [**WawAPI**](https://wawapi.xyz/model-square) ⭐ | Model marketplace + quick activation | `Relay` |
-| [梦幻API](https://mhapi.cn/available-channels) | Live channel-status page, broad model coverage | `Relay` |
+| [梦幻API](https://mhapi.cn/available-channels) | Live channel-status page, broad model coverage ⚠️ Possibly dead as of 2026-10; domain may have changed | `Relay` |
 | [Camel API](https://luotuokj.top/dashboard) | Clean console, fine for light usage | `Relay` |
 | [AIAPIBANK](https://aiapibank.com/) | Browse by model, pick your channel | `Relay` |
-| [Lucis API](https://www.lucisapi.ai/keys) | Per-key management, good for project isolation | `Relay` |
+| [Lucis API](https://www.lucisapi.ai/keys) | Per-key management, good for project isolation ⚠️ Possibly dead as of 2026-10; domain may have changed | `Relay` |
 | [元衡 API](https://cn.meta-api.vip/pricing) | Domestic nodes, transparent pricing | `Relay` |
 | [EMOAI](https://api.emooo.cc/dashboard) | Focused on Chinese models, cheap | `CN models` |
 | [OhMyGPT](https://www.ohmygpt.com/) | 240+ models, running since 2023, corporate invoicing | `Aggregator` |
@@ -217,10 +217,10 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [星辰VPN](https://xcvpn.us/) | Home-broadband nodes, ~¥17/month | `Airport` |
 | [iKuuu VPN](https://ikuuu.win/) | Free / low-cost tier, light use | `Airport` |
 | [Mitce](https://mitce.io/) | Cheap small-traffic plan | `Airport` |
-| [FlyBit](https://fb.fastfastfast.buzz/) | ~¥15/month, home-broadband nodes | `Airport` |
+| [FlyBit](https://fb.fastfastfast.buzz/) | ~¥15/month, home-broadband nodes ⚠️ Possibly dead as of 2026-10; domain may have changed | `Airport` |
 | [良心云](https://xn--9kqz23b19z.com/) | Budget-friendly airport | `Airport` |
 | [寰宇云](https://hyy.52kok.cn/) | Native IPs, ~¥79/year | `Airport` |
-| [极连云](https://jilianat.homes/) | Native IPs, ~¥96/year | `Airport` |
+| [极连云](https://bhjsehj3u.jilianat.homes/) | Native IPs, ~¥96/year (random subdomain entry) | `Airport` |
 | [TAG](https://honven.l49.net/) | Includes home-broadband nodes, ~¥162/year | `Airport` |
 | [筋斗云](https://yongjichang.com/) | ~¥17/month, has third-party reviews | `Airport` |
 | [Airport Directory](https://vpsknow.com/airport-recommendations) | Cross-comparison and reviews of airports | `Directory` |
@@ -298,6 +298,7 @@ python tools/gen_site.py      # regenerate the navigator page
 
 | Date | Change |
 | :--- | :--- |
+| 2026-10-16 | Re-verified all **81 links** through a real proxy: **75 reachable**. Flagged 3 likely-dead entries (梦幻API / Lucis API / FlyBit), fixed the 极连云 entry domain |
 | 2026-10-16 | **Restructured into two top-level groups**: 🤖 AI-related (61) + 🌐 Non-AI · General Infrastructure (20) — 81 entries across 9 categories; added proxy, network-tool and account sections |
 | 2026-10-16 | Initial release, 64 entries. Fixed `new-api` → `QuantumNous/new-api` and `V3 API` → `gpt.ge` migrations |
 
