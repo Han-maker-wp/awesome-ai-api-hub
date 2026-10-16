@@ -45,7 +45,12 @@ def probe(url: str) -> dict:
 
 def main() -> int:
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    items = [(c["title"], it) for c in data["categories"] for it in c["items"]]
+    items = [
+        (f'{g["title"]} / {c["title"]}', it)
+        for g in data["groups"]
+        for c in g["categories"]
+        for it in c["items"]
+    ]
     print(f"probe {len(items)} urls ...\n")
     with ThreadPoolExecutor(max_workers=16) as ex:
         results = list(ex.map(lambda p: (p[0], probe(p[1]["url"]), p[1]["name"]), items))

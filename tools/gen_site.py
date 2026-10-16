@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""从 data/sites.json 生成单文件导航页 index.html（数据内嵌，无外部依赖）。"""
+"""从 data/sites.json 生成单文件导航页 index.html（数据内嵌，无外部依赖）。
+
+数据结构：groups[] -> categories[] -> items[]
+"""
 import json
 from datetime import date
 from pathlib import Path
@@ -13,8 +16,8 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Awesome AI API Hub · AI API 中转站导航</title>
-<meta name="description" content="精选 AI API 中转站、聚合网关、官方直连入口、比价导航站与开源自建方案。一个 Key 打通 GPT、Claude、Gemini、DeepSeek 与国产大模型。">
+<title>Awesome AI API Hub · AI API 中转站与导航合集</title>
+<meta name="description" content="精选 AI API 中转站、聚合网关、官方直连入口、比价导航站与开源自建方案，另附网络代理、账号接码等通用基础设施。">
 <style>
 :root{
   --bg:#0b0f14; --bg2:#0f151c; --card:#151c24; --card-h:#1b2430;
@@ -48,7 +51,7 @@ h1{
   background:linear-gradient(100deg,#e6edf3 8%,#7cc0ff 48%,#a78bfa 88%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-.sub{margin-top:14px;color:var(--fg2);font-size:16.5px;max-width:760px}
+.sub{margin-top:14px;color:var(--fg2);font-size:16.5px;max-width:780px}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .stat{
   background:rgba(255,255,255,.04);border:1px solid var(--line);
@@ -57,7 +60,7 @@ h1{
 .stat b{color:var(--fg);font-weight:700}
 .stat .dot{color:var(--ok)}
 
-/* ---------- search ---------- */
+/* ---------- toolbar ---------- */
 .toolbar{
   position:sticky;top:0;z-index:30;
   background:rgba(11,15,20,.9);backdrop-filter:blur(12px);
@@ -79,14 +82,30 @@ h1{
 }
 .chip:hover{color:var(--fg);border-color:var(--acc);background:rgba(77,159,255,.08)}
 .chip.on{background:var(--acc);border-color:var(--acc);color:#08111d;font-weight:650}
+.chip.grp{border-color:#3a4b60}
 
-/* ---------- sections ---------- */
+/* ---------- group ---------- */
 main{padding:34px 0 10px}
-section{margin-bottom:46px;scroll-margin-top:76px}
+.group{margin-bottom:54px}
+.group-head{
+  display:flex;align-items:center;gap:13px;flex-wrap:wrap;
+  padding:14px 18px;border-radius:var(--r);
+  background:linear-gradient(90deg,rgba(77,159,255,.13),rgba(124,92,255,.07) 45%,transparent 85%);
+  border:1px solid var(--line);border-left:3px solid var(--acc);
+  margin-bottom:10px;
+}
+.group-head .gi{font-size:24px;line-height:1}
+.group-head h2{font-size:24px;font-weight:800;letter-spacing:-.015em}
+.group-head .gmeta{margin-left:auto;font-size:12.5px;color:var(--fg3);text-align:right;line-height:1.5}
+.group-desc{color:var(--fg2);font-size:14.2px;margin-bottom:26px;max-width:920px}
+.group.alt .group-head{background:linear-gradient(90deg,rgba(124,92,255,.14),rgba(77,159,255,.06) 45%,transparent 85%);border-left-color:var(--acc2)}
+
+/* ---------- section ---------- */
+section{margin-bottom:34px;scroll-margin-top:76px}
 .shead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.shead h2{font-size:22px;font-weight:750;letter-spacing:-.01em}
+.shead h3{font-size:19px;font-weight:730;letter-spacing:-.01em}
 .shead .cnt{font-size:12.5px;color:var(--fg3);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
-.sdesc{color:var(--fg2);font-size:14px;margin-bottom:18px;max-width:900px}
+.sdesc{color:var(--fg2);font-size:13.8px;margin-bottom:16px;max-width:920px}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:13px}
 .card{
@@ -129,6 +148,7 @@ footer a:hover{text-decoration:underline}
   header .wrap{padding-top:40px;padding-bottom:32px}
   .grid{grid-template-columns:1fr}
   .host{display:none}
+  .group-head .gmeta{margin-left:0}
 }
 </style>
 </head>
@@ -137,10 +157,10 @@ footer a:hover{text-decoration:underline}
 <header>
   <div class="wrap">
     <h1>🔌 Awesome AI API Hub</h1>
-    <p class="sub">一个 Key，打通全世界的大模型。精选 AI API 中转站 · 聚合网关 · 官方直连入口 · 比价导航站 · 开源自建方案。</p>
+    <p class="sub">一个 Key，打通全世界的大模型。AI API 中转站 · 聚合网关 · 官方直连 · 比价导航 · 自建方案，外带网络代理与账号接码等通用基础设施。</p>
     <div class="stats">
       <span class="stat"><span class="dot">●</span> 收录 <b>__TOTAL__</b> 个站点</span>
-      <span class="stat">分为 <b>__NCAT__</b> 个类别</span>
+      <span class="stat"><b>__NGROUP__</b> 个大类 · <b>__NCAT__</b> 个子分类</span>
       <span class="stat">链接核实于 <b>__DATE__</b></span>
       <span class="stat">⭐ 为整理者主观印象，非背书</span>
     </div>
@@ -149,7 +169,7 @@ footer a:hover{text-decoration:underline}
 
 <div class="toolbar">
   <div class="wrap">
-    <input id="q" type="search" placeholder="搜索站点名称、说明或标签，例如：中转 / 比价 / Go…" autocomplete="off">
+    <input id="q" type="search" placeholder="搜索站点名称、说明或标签，例如：中转 / 比价 / 机场 / Go…" autocomplete="off">
     <div class="chips" id="chips"></div>
   </div>
 </div>
@@ -161,7 +181,7 @@ footer a:hover{text-decoration:underline}
     <div class="box">
       <b>⚠️ 免责声明</b><br>
       本页面为纯信息聚合，所有链接均指向<strong>第三方独立运营</strong>的平台，不对其服务质量、资金安全、数据安全作任何担保。
-      中转站与账号交易类服务可能违反上游平台的服务条款，请自行核实资质与合法性，风险自负，并遵守所在地区法律法规。
+      中转站、账号交易与网络代理类服务可能违反上游平台服务条款或当地法律法规，请自行核实资质与合法性，风险自负。
       本页与所列任何站点无隶属、代理或利益关系。
     </div>
     <div class="meta">
@@ -178,40 +198,35 @@ const $main = document.getElementById('main');
 const $q = document.getElementById('q');
 const $chips = document.getElementById('chips');
 
-let activeCat = 'all';
+let activeGroup = 'all';
 
 const hostOf = u => { try { return new URL(u).host.replace(/^www\\./, ''); } catch (e) { return ''; } };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-// 分类筛选按钮（短标签）
-const SHORT = {
-  'relay': '中转站', 'official-cn': '国内官方', 'official-global': '国际平台',
-  'nav': '导航比价', 'account': '账号接码', 'selfhost': '自建网关'
-};
-const chipDefs = [{ id: 'all', label: '全部' }].concat(
-  DATA.categories.map(c => ({ id: c.id, label: c.icon + ' ' + (SHORT[c.id] || c.title) }))
+// 一级筛选：大类
+const chipDefs = [{ id: 'all', label: '全部', grp: true }].concat(
+  DATA.groups.map(g => ({ id: g.id, label: g.icon + ' ' + g.title, grp: true }))
 );
 $chips.innerHTML = chipDefs.map(c =>
-  `<button class="chip${c.id === 'all' ? ' on' : ''}" data-cat="${c.id}">${esc(c.label)}</button>`
+  `<button class="chip${c.grp ? ' grp' : ''}${c.id === 'all' ? ' on' : ''}" data-grp="${c.id}">${esc(c.label)}</button>`
 ).join('');
 
 $chips.addEventListener('click', e => {
   const b = e.target.closest('.chip');
   if (!b) return;
-  activeCat = b.dataset.cat;
+  activeGroup = b.dataset.grp;
   [...$chips.children].forEach(x => x.classList.toggle('on', x === b));
   render();
 });
 
-function match(item, cat, kw) {
-  if (activeCat !== 'all' && cat.id !== activeCat) return false;
+function hit(item, cat, grp, kw) {
+  if (activeGroup !== 'all' && grp.id !== activeGroup) return false;
   if (!kw) return true;
-  const hay = (item.name + ' ' + item.note + ' ' + item.tag + ' ' + cat.title).toLowerCase();
+  const hay = (item.name + ' ' + item.note + ' ' + item.tag + ' ' + cat.title + ' ' + grp.title).toLowerCase();
   return kw.split(/\\s+/).filter(Boolean).every(t => hay.includes(t));
 }
 
 function card(it) {
-  const host = hostOf(it.url);
   return `<a class="card" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">
     <div class="top">
       <span class="nm">${esc(it.name)}</span>
@@ -220,23 +235,39 @@ function card(it) {
     <div class="note">${esc(it.note)}</div>
     <div class="foot">
       <span class="tag">${esc(it.tag)}</span>
-      <span class="host">${esc(host)}</span>
+      <span class="host">${esc(hostOf(it.url))}</span>
     </div>
   </a>`;
 }
 
 function render() {
   const kw = $q.value.trim().toLowerCase();
-  let html = '', total = 0;
-  for (const cat of DATA.categories) {
-    const items = cat.items.filter(it => match(it, cat, kw));
-    if (!items.length) continue;
-    total += items.length;
-    html += `<section id="${esc(cat.id)}">
-      <div class="shead"><h2>${esc(cat.icon + ' ' + cat.title)}</h2><span class="cnt">${items.length}</span></div>
-      <p class="sdesc">${esc(cat.desc)}</p>
-      <div class="grid">${items.map(card).join('')}</div>
-    </section>`;
+  let html = '';
+  for (const grp of DATA.groups) {
+    if (activeGroup !== 'all' && grp.id !== activeGroup) continue;
+    const secs = [];
+    let gcount = 0, gcats = 0;
+    for (const cat of grp.categories) {
+      const items = cat.items.filter(it => hit(it, cat, grp, kw));
+      if (!items.length) continue;
+      gcount += items.length; gcats += 1;
+      secs.push(`<section id="${esc(cat.id)}">
+        <div class="shead"><h3>${esc(cat.icon + ' ' + cat.title)}</h3><span class="cnt">${items.length}</span></div>
+        <p class="sdesc">${esc(cat.desc)}</p>
+        <div class="grid">${items.map(card).join('')}</div>
+      </section>`);
+    }
+    if (!secs.length) continue;
+    const alt = grp.id !== 'ai' ? ' alt' : '';
+    html += `<div class="group${alt}">
+      <div class="group-head">
+        <span class="gi">${esc(grp.icon)}</span>
+        <h2>${esc(grp.title)}</h2>
+        <span class="gmeta">${gcount} 个站点 · ${gcats} 个子分类</span>
+      </div>
+      <p class="group-desc">${esc(grp.desc)}</p>
+      ${secs.join('')}
+    </div>`;
   }
   $main.innerHTML = html || '<div class="empty">没有匹配的站点，换个关键词试试。</div>';
 }
@@ -251,16 +282,18 @@ render();
 
 def main() -> None:
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    total = sum(len(c["items"]) for c in data["categories"])
+    groups = data["groups"]
+    total = sum(len(c["items"]) for g in groups for c in g["categories"])
+    ncat = sum(len(g["categories"]) for g in groups)
     html = (
         TEMPLATE.replace("__DATA__", json.dumps(data, ensure_ascii=False))
         .replace("__TOTAL__", str(total))
-        .replace("__NCATE__", str(len(data["categories"])))
-        .replace("__NCAT__", str(len(data["categories"])))
+        .replace("__NGROUP__", str(len(groups)))
+        .replace("__NCAT__", str(ncat))
         .replace("__DATE__", data["meta"].get("updated", str(date.today())))
     )
     OUT.write_text(html, encoding="utf-8")
-    print(f"wrote {OUT}  ({len(html):,} bytes, {total} items, {len(data['categories'])} categories)")
+    print(f"wrote {OUT}  ({len(html):,} bytes, {total} items, {len(groups)} groups, {ncat} categories)")
 
 
 if __name__ == "__main__":
