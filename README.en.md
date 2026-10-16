@@ -4,7 +4,7 @@
 
 **One key. Every model.**
 
-**80+** curated entries in two top-level groups: **AI-related** (relay stations / aggregators / official endpoints / comparison directories / self-hosted gateways) and **Non-AI · General Infrastructure** (network proxies / network tools / accounts & SMS)
+**99** curated entries in two top-level groups: **AI-related** (relay stations / aggregators / official endpoints / comparison directories / self-hosted gateways) and **Non-AI · General Infrastructure** (network proxies / airport reviews / network tools / accounts & SMS)
 
 Pay with Alipay/WeChat, no foreign card, no network gymnastics — call GPT, Claude, Gemini, DeepSeek and every major Chinese LLM from one endpoint
 
@@ -62,7 +62,8 @@ This repo organizes those entry points **into two top-level groups**, and marks 
 
 | Category | What's inside | Who it's for |
 | :--- | :--- | :--- |
-| [🚀 Network Proxies · Airports / VPN](#-network-proxies--airports--vpn) | 13, cross-border egress | When you need a stable egress (⚠️ see notice) |
+| [🚀 Network Proxies · Airports / VPN](#-network-proxies--airports--vpn) | 12, cross-border egress | When you need a stable egress (⚠️ see notice) |
+| [📊 Airport Reviews · Exit-Scam Watch](#-airport-reviews--exit-scam-watch--blogs) | 13, independent tests & scam lists | **Read how others got burned, before you pay** |
 | [🔧 Network Tools · IP Check · CF](#-network-tools--ip-check--cloudflare) | 4, IP purity and node optimization | Inspect IP quality before buying |
 | [📱 Accounts · SMS · Pools](#-accounts--sms--pools) | 3, overseas accounts & SMS codes | When you need an overseas account |
 
@@ -218,7 +219,7 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 
 # 🌐 II. Non-AI · General Infrastructure
 
-> Not directly about LLMs, but these are the **prerequisites**: network egress, IP quality, accounts and SMS.
+> Not directly about LLMs, but these are the **prerequisites**: network egress, how to pick an airport, IP quality, accounts and SMS.
 
 ## 🚀 Network Proxies · Airports / VPN
 
@@ -239,6 +240,28 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [极连云](https://bhjsehj3u.jilianat.homes/) | Native IPs, ~¥96/year (random subdomain entry) | `Airport` |
 | [TAG](https://honven.l49.net/) | Includes home-broadband nodes, ~¥162/year | `Airport` |
 | [筋斗云](https://yongjichang.com/) | ~¥17/month, has third-party reviews | `Airport` |
+
+## 📊 Airport Reviews · Exit-Scam Watch · Blogs
+
+> This market suffers from **severe information asymmetry**: every landing page claims "IPLC dedicated lines, native IPs, no throttling", while real-world performance varies enormously — and vendors disappearing with prepaid money is routine.
+> Before paying, read independent tests and search the vendor's name in the exit-scam lists. That matters far more than saving a few yuan.
+>
+> ⚠️ Most of these sites run on **affiliate commissions**, so their recommendation lists carry commercial bias. Treat them as **information sources**, not **leaderboards**.
+
+| Name | Notes | Tag |
+| :--- | :--- | :--- |
+| [**Limbopro (毒奶博客)**](https://limbopro.com/) ⭐ | Hands-on airport tests + exit-scam warnings; the most trusted veteran blog | `Review` |
+| [**Paolujichang (跑路机场清单)**](https://github.com/limbopro/Paolujichang) ⭐ | Open-source GitHub list of dead and high-risk vendors | `Scam list` |
+| [**Ermo (二毛)**](https://ermao.net/) ⭐ | Airport reviews + self-hosting guides, updated steadily | `Review` |
+| [**ClashX Blog (茶波博客)**](https://clashx.pro/) ⭐ | Airport reviews and client tutorials, practical focus | `Review` |
+| [**AiJichang (爱机场)**](https://aijichang.com/) ⭐ | Recommendations + exit-scam warnings + news, actively updated | `Review` |
+| [RocketWang (火箭旺)](https://shadowrocket.one/) | Per-vendor hands-on tests (WgetCloud / Flower Cloud / Jilianyun), updated into 2026 | `Review` |
+| [Fanqiangdao (翻墙岛)](https://fanqiangdao.com/) | Recommendations plus networking explainers | `Review` |
+| [JichangCN](https://jichangcnweb.com/) | Cross-vendor recommendation roundups | `Recs` |
+| [Jichang Tuijian Pro](https://jichangtuijianpro.com/) | Categorized recommendations and deals | `Recs` |
+| [RuntuShare (润兔分享)](https://runtushare.net/) | Airport reviews and deal sharing | `Review` |
+| [DuyaoSS (毒药SS)](https://duyaoss.com/) | Classic review site, ⚠️ essentially dormant since 2024-04; historical reference only | `Review` |
+| [Telegram channel (翻墙频道)](https://t.me/ffqchannel) | Real-time exit-scam reports and node sharing | `Channel` |
 | [Airport Directory](https://vpsknow.com/airport-recommendations) | Cross-comparison and reviews of airports | `Directory` |
 
 ## 🔧 Network Tools · IP Check · Cloudflare
@@ -290,7 +313,7 @@ Relay stations are **third-party resellers** of wildly varying quality. Five min
 5. **Don't send sensitive data to unknown stations** — your prompts pass through their servers.
 6. **Know whether it's "official route" or "reverse-engineered channel"** — the latter is dirt cheap but can cut out at any moment.
 7. **Always keep a spare** — have at least two working stations and keep config switchable.
-8. **Airports have their own set of traps** — prefer monthly billing, verifiable IP purity, and long operating history. A "super-cheap yearly blowout" is usually a warning sign.
+8. **Airports have their own set of traps** — prefer monthly billing, verifiable IP purity, and long operating history. A "super-cheap yearly blowout" is usually a warning sign. Search the vendor's name in the [📊 reviews and scam lists](#-airport-reviews--exit-scam-watch--blogs) before paying — **but remember those sites live on affiliate commissions, so discount their leaderboards accordingly.**
 
 ---
 
@@ -314,6 +337,7 @@ python tools/gen_site.py      # regenerate the navigator page
 
 | Date | Change |
 | :--- | :--- |
+| 2026-10-16 | Added **📊 Airport Reviews · Exit-Scam Watch · Blogs** category (13 review sites / scam lists / channels); **99** entries / 11 categories total |
 | 2026-10-16 | Added **🔬 AI API Detection · Verification** category (7 checkers) to counter "swapping and dumbing down"; **87** entries / 10 categories total |
 | 2026-10-16 | Re-verified all **81 links** through a real proxy: **75 reachable**. Flagged 3 likely-dead entries (梦幻API / Lucis API / FlyBit), fixed the 极连云 entry domain |
 | 2026-10-16 | **Restructured into two top-level groups**: 🤖 AI-related (61) + 🌐 Non-AI · General Infrastructure (20) — 81 entries across 9 categories; added proxy, network-tool and account sections |

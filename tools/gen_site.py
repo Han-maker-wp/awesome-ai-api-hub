@@ -157,7 +157,7 @@ footer a:hover{text-decoration:underline}
 <header>
   <div class="wrap">
     <h1>🔌 Awesome AI API Hub</h1>
-    <p class="sub">一个 Key，打通全世界的大模型。AI API 中转站 · 聚合网关 · 官方直连 · 比价导航 · 自建方案，外带网络代理与账号接码等通用基础设施。</p>
+    <p class="sub">一个 Key，打通全世界的大模型。AI API 中转站 · 聚合网关 · 官方直连 · 检测验真 · 比价导航 · 自建方案，外带网络代理、机场评测与账号接码等通用基础设施。</p>
     <div class="stats">
       <span class="stat"><span class="dot">●</span> 收录 <b>__TOTAL__</b> 个站点</span>
       <span class="stat"><b>__NGROUP__</b> 个大类 · <b>__NCAT__</b> 个子分类</span>

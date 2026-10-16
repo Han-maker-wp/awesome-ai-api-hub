@@ -159,7 +159,27 @@
             { "name": "寰宇云", "url": "https://hyy.52kok.cn/", "tag": "机场", "note": "原生 IP，年付约 79 元", "star": false },
             { "name": "极连云", "url": "https://bhjsehj3u.jilianat.homes/", "tag": "机场", "note": "原生 IP，年付约 96 元（入口为随机子域名，主域名不解析）", "star": false },
             { "name": "TAG", "url": "https://honven.l49.net/", "tag": "机场", "note": "含家宽节点，年付约 162 元", "star": false },
-            { "name": "筋斗云", "url": "https://yongjichang.com/", "tag": "机场", "note": "约 17 元/月，有第三方评测页可参考", "star": false },
+            { "name": "筋斗云", "url": "https://yongjichang.com/", "tag": "机场", "note": "约 17 元/月，有第三方评测页可参考", "star": false }
+          ]
+        },
+        {
+          "id": "airport-review",
+          "title": "机场评测 · 跑路预警 · 博客",
+          "icon": "📊",
+          "desc": "买之前先看别人怎么翻车的。独立博客的实测数据比机场自己的宣传页靠谱得多 —— 尤其是跑路预警名单。",
+          "items": [
+            { "name": "毒奶博客 Limbopro", "url": "https://limbopro.com/", "tag": "评测", "note": "机场实测 + 跑路预警，圈内口碑最硬的老牌博客", "star": true },
+            { "name": "跑路机场清单", "url": "https://github.com/limbopro/Paolujichang", "tag": "跑路清单", "note": "GitHub 开源清单，记录已跑路 / 高危机场", "star": true },
+            { "name": "二毛", "url": "https://ermao.net/", "tag": "评测", "note": "机场评测 + 自建教程，更新稳定", "star": true },
+            { "name": "茶波博客", "url": "https://clashx.pro/", "tag": "评测", "note": "机场测评与客户端教程，偏实用向", "star": true },
+            { "name": "爱机场", "url": "https://aijichang.com/", "tag": "评测", "note": "机场推荐 + 跑路预警 + 资讯，更新活跃", "star": true },
+            { "name": "火箭旺", "url": "https://shadowrocket.one/", "tag": "评测", "note": "逐家机场实测（WgetCloud / 花云 / 极连云等），更新到 2026", "star": false },
+            { "name": "翻墙岛", "url": "https://fanqiangdao.com/", "tag": "评测", "note": "机场推荐与网络知识科普", "star": false },
+            { "name": "机场推荐", "url": "https://jichangcnweb.com/", "tag": "推荐", "note": "机场横向推荐汇总", "star": false },
+            { "name": "机场推荐 Pro", "url": "https://jichangtuijianpro.com/", "tag": "推荐", "note": "分类推荐 + 优惠信息", "star": false },
+            { "name": "润兔分享", "url": "https://runtushare.net/", "tag": "评测", "note": "机场测评与优惠分享", "star": false },
+            { "name": "毒药SS DuyaoSS", "url": "https://duyaoss.com/", "tag": "评测", "note": "经典机场测评站，⚠️ 2024-04 后基本停更，仅作历史参考", "star": false },
+            { "name": "Telegram 翻墙频道", "url": "https://t.me/ffqchannel", "tag": "频道", "note": "实时跑路爆料与节点分享", "star": false },
             { "name": "机场导航站", "url": "https://vpsknow.com/airport-recommendations", "tag": "导航", "note": "机场横向评测与推荐汇总", "star": false }
           ]
         },
