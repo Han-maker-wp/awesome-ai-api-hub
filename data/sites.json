@@ -78,13 +78,27 @@
           ]
         },
         {
+          "id": "detect",
+          "title": "AI API 检测 · 验真",
+          "icon": "🔬",
+          "desc": "中转站最大的坑是「掉包降智」——你付 GPT-5 的钱，拿到的可能是蒸馏小模型。下面这些站用真实请求探针实测模型真伪、掺水率、扣费是否对得上。⚠️ 检测请务必用临时 Key。",
+          "items": [
+            { "name": "禾维 AI", "url": "https://www.hvoy.ai/", "tag": "排名+检测", "note": "中转站排名 + API 真假检测（掺水率、延迟、在线率一屏看完）", "star": true },
+            { "name": "真测 Ztest", "url": "https://ztest.cc/", "tag": "探针检测", "note": "25~40 项探针实测模型真伪与响应质量，产出可信度排行", "star": true },
+            { "name": "API-CHECK", "url": "https://api-check.com/", "tag": "检测", "note": "查假模型、Token 注入、Prompt 提取、指令覆盖、响应指纹", "star": true },
+            { "name": "模型检测站", "url": "https://model-check.org/", "tag": "检测", "note": "排查模型掉包、掺水冒充、流式中断、工具调用阉割", "star": true },
+            { "name": "API Ranking", "url": "https://apiranking.com/", "tag": "实测排行", "note": "139+ 中转站实测：真假、扣费对账、缓存命中、降智测试", "star": true },
+            { "name": "火眼金睛识 AI", "url": "http://eagle.videogen.art/", "tag": "检测", "note": "纯前端处理，专项测试鉴别 Claude / OpenAI 是否被换模型", "star": false },
+            { "name": "智知 API 纯度检测", "url": "https://github.com/businesszhizhiai/zhizhi-api-purity", "tag": "开源", "note": "开源的 API 纯度检测站，可自行部署，含接口稳定性记录", "star": false }
+          ]
+        },
+        {
           "id": "nav",
           "title": "AI 导航 · 比价 · 评测",
           "icon": "🧭",
           "desc": "不知道选哪家？先上这些站比一比 —— 实时报价、渠道在线率、掺水率、跑路预警都在这儿。",
           "items": [
             { "name": "TokenNav", "url": "https://tokennav.cc/", "tag": "导航", "note": "收录 200+ 中转站，含价格 / 支付方式 / 在线率", "star": true },
-            { "name": "禾维 AI", "url": "https://www.hvoy.ai/", "tag": "排名+检测", "note": "中转站排名 + API 真假检测（掺水率、延迟）", "star": true },
             { "name": "PriceAI", "url": "https://priceai.cc/", "tag": "比价", "note": "低价卡网订阅与中转 API 比价雷达", "star": true },
             { "name": "OpenPrice", "url": "https://www.openprice.cc/card-products", "tag": "比价", "note": "聚合 280+ 渠道商报价，含最低价与在售数", "star": true },
             { "name": "Aibijia", "url": "https://aibijia.org/", "tag": "比价", "note": "AI 订阅一键比价，帮你找便宜 Token", "star": true },

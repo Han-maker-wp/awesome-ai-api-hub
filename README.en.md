@@ -53,7 +53,8 @@ This repo organizes those entry points **into two top-level groups**, and marks 
 | [🔌 Relay Stations / Aggregators](#-relay-stations--aggregators) | 16, reachable from China, Alipay-friendly | Solo devs, small teams |
 | [🏢 Official · Chinese Vendors](#-official--chinese-vendors) | 14 official consoles, free credits | Compliance, invoicing, stability |
 | [🌍 Official · Global Platforms](#-official--global-platforms) | 12, newest model coverage | Overseas network + foreign card |
-| [🧭 AI Directories · Comparison](#-ai-directories--comparison) | 10, live pricing and uptime | Do your homework before picking |
+| [🔬 Detection · Verification](#-ai-api-detection--verification) | 7, test real model identity and dilution | **Verify before you pay** |
+| [🧭 AI Directories · Comparison](#-ai-directories--comparison) | 9, live pricing and uptime | Do your homework before picking |
 | [🛒 AI Accounts · Subscriptions](#-ai-accounts--subscriptions) | 3, buy AI memberships | When you need a ready account |
 | [🛠️ Self-Hosted Gateways](#️-self-hosted-gateways) | 6 open-source, deploy yourself | When you don't want to hand over keys |
 
@@ -156,14 +157,29 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai/) | Edge inference, free tier | `Edge` |
 | [Poe](https://poe.com/) | By Quora, chat-style multi-model access | `Aggregator` |
 
+## 🔬 AI API Detection · Verification
+
+> The biggest trap with relay stations is **"swapping and dumbing down"** — you pay for GPT-5 and get a distilled small model. Some third-party reviews claim nearly half of relay endpoints do this to some degree.
+> **Verify before you pay.**
+> ⚠️ Always test with a **temporary key**, never your main key, on an unknown station.
+
+| Name | Notes | Tag |
+| :--- | :--- | :--- |
+| [**Hvoy AI**](https://www.hvoy.ai/) ⭐ | Station rankings + API authenticity testing (dilution, latency, uptime) | `Ranking+Test` |
+| [**Ztest**](https://ztest.cc/) ⭐ | 25–40 probes measure model authenticity and response quality; publishes a trust ranking | `Probe` |
+| [**API-CHECK**](https://api-check.com/) ⭐ | Detects fake models, token injection, prompt extraction, instruction override, response fingerprinting | `Check` |
+| [**Model-Check**](https://model-check.org/) ⭐ | Finds model swapping, dilution, stream breaks, crippled tool calling | `Check` |
+| [**API Ranking**](https://apiranking.com/) ⭐ | 139+ stations tested: authenticity, billing reconciliation, cache hits, degradation | `Benchmark` |
+| [火眼金睛识 AI](http://eagle.videogen.art/) | Client-side only; dedicated tests to spot swapped Claude / OpenAI models | `Check` |
+| [Zhizhi API Purity](https://github.com/businesszhizhiai/zhizhi-api-purity) | Open-source purity checker you can self-host, with stability logging | `Open source` |
+
 ## 🧭 AI Directories · Comparison
 
-> Not sure which one to pick? Compare first — live pricing, uptime, dilution rate, shutdown warnings.
+> Not sure which one to pick? Compare first — live pricing, uptime, shutdown warnings.
 
 | Name | Notes | Tag |
 | :--- | :--- | :--- |
 | [**TokenNav**](https://tokennav.cc/) ⭐ | 200+ stations with price / payment / uptime comparison | `Directory` |
-| [**Hvoy AI**](https://www.hvoy.ai/) ⭐ | Station rankings + API authenticity testing | `Ranking+Test` |
 | [**PriceAI**](https://priceai.cc/) ⭐ | Price radar for cheap subscriptions and relay APIs | `Compare` |
 | [**OpenPrice**](https://www.openprice.cc/card-products) ⭐ | Aggregates 280+ vendors, lowest price and stock counts | `Compare` |
 | [**Aibijia**](https://aibijia.org/) ⭐ | One-click subscription comparison | `Compare` |
@@ -298,6 +314,7 @@ python tools/gen_site.py      # regenerate the navigator page
 
 | Date | Change |
 | :--- | :--- |
+| 2026-10-16 | Added **🔬 AI API Detection · Verification** category (7 checkers) to counter "swapping and dumbing down"; **87** entries / 10 categories total |
 | 2026-10-16 | Re-verified all **81 links** through a real proxy: **75 reachable**. Flagged 3 likely-dead entries (梦幻API / Lucis API / FlyBit), fixed the 极连云 entry domain |
 | 2026-10-16 | **Restructured into two top-level groups**: 🤖 AI-related (61) + 🌐 Non-AI · General Infrastructure (20) — 81 entries across 9 categories; added proxy, network-tool and account sections |
 | 2026-10-16 | Initial release, 64 entries. Fixed `new-api` → `QuantumNous/new-api` and `V3 API` → `gpt.ge` migrations |
