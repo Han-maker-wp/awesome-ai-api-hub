@@ -13,6 +13,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-3da639.svg)](LICENSE)
 [![Links Checked](https://img.shields.io/badge/links%20checked-2026--10--16-blue.svg)](#-更新记录)
 
+**简体中文** · [English](README.en.md)
+
 <br>
 
 <a href="index.html"><img src="assets/screenshot.png" alt="Awesome AI API Hub 导航页预览" width="880"></a>
