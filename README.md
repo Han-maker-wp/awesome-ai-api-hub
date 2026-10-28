@@ -149,6 +149,7 @@ print(resp.choices[0].message.content)
 | 名称 | 说明 | 标签 |
 | :--- | :--- | :--- |
 | [**OpenRouter**](https://openrouter.ai/) ⭐ | 全球最大模型路由平台，一个 Key 全模型 | `聚合` |
+| [**APIClaw**](https://apiclaw.biz/) | Flat-rate OpenAI-compatible aggregator ($19–$129/mo). Claude / GPT / Gemini / DeepSeek + more; crypto via NOWPayments | `聚合` |
 | [**Groq**](https://console.groq.com/) ⭐ | LPU 极速推理，免费额度大方 | `推理` |
 | [Together AI](https://api.together.xyz/) | 开源模型推理快，价格低 | `推理` |
 | [Fireworks AI](https://fireworks.ai/) | 低延迟推理，适合生产环境 | `推理` |
