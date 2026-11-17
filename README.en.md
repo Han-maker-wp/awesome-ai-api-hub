@@ -170,6 +170,7 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 | Name | Notes | Tag |
 | :--- | :--- | :--- |
 | [**Hvoy AI**](https://www.hvoy.ai/) ⭐ | Station rankings + API authenticity testing (dilution, latency, uptime) | `Ranking+Test` |
+| [**Folkbench**](https://folkbench.com/) | Relay rankings and online checks; ranking uses partner tiers and ops boosts, some figures are samples | `Ranking+Test` |
 | [**Ztest**](https://ztest.cc/) ⭐ | 25–40 probes measure model authenticity and response quality; publishes a trust ranking | `Probe` |
 | [**API-CHECK**](https://api-check.com/) ⭐ | Detects fake models, token injection, prompt extraction, instruction override, response fingerprinting | `Check` |
 | [**Model-Check**](https://model-check.org/) ⭐ | Finds model swapping, dilution, stream breaks, crippled tool calling | `Check` |
@@ -311,7 +312,7 @@ Tools like Claude Code, Codex, Cline, Cherry Studio and LobeChat all accept a **
 
 Relay stations are **third-party resellers** of wildly varying quality. Five minutes of homework before you pay saves 90% of the pain:
 
-1. **Check uptime and age** — look at historical data on [TokenNav](https://tokennav.cc/) / [Hvoy AI](https://www.hvoy.ai/). Be careful topping up heavily on a two-month-old station.
+1. **Check uptime and age** — look at public data on [TokenNav](https://tokennav.cc/) / [Hvoy AI](https://www.hvoy.ai/) / [Folkbench](https://folkbench.com/). Be careful topping up heavily on a two-month-old station.
 2. **Test the "dilution rate"** — some stations quietly route `gpt-4o` requests to a cheaper small model. Authenticity-testing sites can detect this.
 3. **Top up small first, never a yearly plan up front** — start with the minimum, run real workloads, then extend. Shutdowns are normal, not exceptional.
 4. **Verify model identity** — asking "what model are you" isn't enough. Use **known-answer hard questions** and compare against official results.
