@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Awesome AI API Hub",
-    "updated": "2026-10-16",
+    "updated": "2026-11-17",
     "repo": "https://github.com/Han-maker-wp/awesome-ai-api-hub"
   },
   "groups": [
@@ -85,6 +85,7 @@
           "desc": "中转站最大的坑是「掉包降智」——你付 GPT-5 的钱，拿到的可能是蒸馏小模型。下面这些站用真实请求探针实测模型真伪、掺水率、扣费是否对得上。⚠️ 检测请务必用临时 Key。",
           "items": [
             { "name": "禾维 AI", "url": "https://www.hvoy.ai/", "tag": "排名+检测", "note": "中转站排名 + API 真假检测（掺水率、延迟、在线率一屏看完）", "star": true },
+            { "name": "Folkbench", "url": "https://folkbench.com/", "tag": "排名+检测", "note": "中转站排行与在线检测，排序含合作加权，含展示样本", "star": false },
             { "name": "真测 Ztest", "url": "https://ztest.cc/", "tag": "探针检测", "note": "25~40 项探针实测模型真伪与响应质量，产出可信度排行", "star": true },
             { "name": "API-CHECK", "url": "https://api-check.com/", "tag": "检测", "note": "查假模型、Token 注入、Prompt 提取、指令覆盖、响应指纹", "star": true },
             { "name": "模型检测站", "url": "https://model-check.org/", "tag": "检测", "note": "排查模型掉包、掺水冒充、流式中断、工具调用阉割", "star": true },
