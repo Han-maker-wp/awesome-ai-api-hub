@@ -33,7 +33,8 @@
             { "name": "EMOAI", "url": "https://api.emooo.cc/dashboard", "tag": "国产模型", "note": "主打国产大模型，价格低", "star": false },
             { "name": "OhMyGPT", "url": "https://www.ohmygpt.com/", "tag": "聚合", "note": "240+ 模型，2023 年运营至今，支持对公发票", "star": false },
             { "name": "API2D", "url": "https://api2d.com/", "tag": "聚合", "note": "老牌中转，稳定性经过时间检验", "star": false },
-            { "name": "CloseAI", "url": "https://www.closeai-asia.com/", "tag": "聚合", "note": "亚洲节点，企业向服务", "star": false }
+            { "name": "CloseAI", "url": "https://www.closeai-asia.com/", "tag": "聚合", "note": "亚洲节点，企业向服务", "star": false },
+            { "name": "TeamoRouter", "url": "https://teamorouter.com/", "tag": "聚合", "note": "Claude 原生接口与 OpenAI 兼容，$5 起充，支持支付宝和 USDT", "star": false }
           ]
         },
         {
